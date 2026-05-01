@@ -1,0 +1,370 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Sreya Sreekumar | Full Stack Developer - Black & Blue Portfolio</title>
+  <!-- Bootstrap 5 + Icons + Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'PortApp/css/style.css' %}">
+
+</head>
+<body data-success="{{ success|yesno:'true,false' }}">
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Sreya Sreekumar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="min-vh-100 d-flex align-items-center" style="padding-top: 80px;">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7">
+        <span class="badge bg-primary bg-opacity-25 text-primary mb-3 px-3 py-2" style="border-radius: 40px;">👋 Welcome</span>
+        <h1 class="display-3 fw-bold mb-3">Hi, I'm <span style="color: #3b82f6;">Sreya Sreekumar</span></h1>
+        <h2 class="h3 text-secondary mb-4">Full Stack Developer</h2>
+        <p class="lead text-secondary mb-4">I build scalable and efficient web applications that deliver exceptional user experiences.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#projects" class="btn btn-primary-custom" id="workBtn"><i class="fas fa-eye me-2"></i>View My Work</a>
+          <a href="{% static 'PortApp/files/Resume Sample.pdf' %}" 
+                class="btn btn-outline-light-custom" 
+                download>
+                <i class="fas fa-download me-2"></i>Download CV
+              </a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <div class="bg-gradient rounded-circle p-1 d-inline-block" style="background: linear-gradient(135deg, #0A66FF, #1E2A3A);">
+          <div class="bg-dark rounded-circle p-2" style="background: #0A0C10 !important;">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/034/783/102/small/portrait-of-a-woman-isolated-on-a-white-background-ai-generated-photo.jpg" alt="Sreya Sreekumar" class="rounded-circle" width="220" height="220" style="object-fit: cover; border: 3px solid #1E2A3A;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="bg-dark bg-opacity-25">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">About Me</h2>
+      </div>
+    </div>
+    <div class="row gy-4">
+      <div class="col-lg-7">
+        <p class="fs-5 text-secondary">I'm a passionate Full Stack Developer with a strong focus on building web applications that are fast, responsive, and user-friendly. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <p><i class="fas fa-user about-icon"></i> <strong>Name:</strong> Sreya Sreekumar</p>
+            <p><i class="fas fa-envelope about-icon"></i> <strong>Email:</strong> sreya.sreekumar@email.com</p>
+            <p><i class="fas fa-map-marker-alt about-icon"></i> <strong>Location:</strong> Kerala,India</p>
+          </div>
+          <div class="col-md-6">
+            <p><i class="fas fa-briefcase about-icon"></i> <strong>Freelance:</strong> Available</p>
+            <p><i class="fab fa-github about-icon"></i> <strong>GitHub:</strong> github.com/sreyasreekumar</p>
+            <p><i class="fab fa-linkedin about-icon"></i> <strong>LinkedIn:</strong> linkedin.com/in/sreyasreekumar</p>
+          </div>
+        </div>
+        <a href="{% static 'PortApp/files/Resume Sample.pdf' %}" 
+            class="btn btn-outline-light-custom" 
+            download>
+            <i class="fas fa-download me-2"></i>Download CV
+          </a>a>
+      </div>
+      <div class="col-lg-5">
+        <div class="contact-card">
+          <h5 class="mb-3"><i class="fas fa-terminal text-primary me-2"></i> Core Philosophy</h5>
+          <p class="text-secondary">Write clean, maintainable code that solves real problems. Bridge the gap between design and functionality.</p>
+          <hr class="bg-secondary">
+          <div class="mt-3">
+            <span class="badge bg-primary me-2">python</span>
+            <span class="badge bg-primary me-2">Django</span>
+            <span class="badge bg-primary">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">My Skills</h2>
+        <p class="text-secondary mb-5">Here are the technologies and tools I work with.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4 class="mb-4"><i class="fas fa-code text-primary me-2"></i> Technical Skills</h4>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-tag">Python</span> <span class="skill-tag">Django</span> <span class="skill-tag">Flask (basic)</span>
+            <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span> <span class="skill-tag">JavaScript (basic)</span>
+            <span class="skill-tag">SQLite</span> <span class="skill-tag">Git & GitHub</span> <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">SQL</span> <span class="skill-tag">API</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4 class="mb-4"><i class="fas fa-users text-primary me-2"></i> Soft Skills</h4>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-tag">Problem Solving</span> <span class="skill-tag">Quick Learner</span>
+             <span class="skill-tag">Time Management</span>
+            <span class="skill-tag">Adaptability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="bg-dark bg-opacity-25">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Experience & Learning</h2>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+
+    <div class="col-md-6">
+        <div class="exp-card">
+          <div class="d-flex justify-content-between flex-wrap">
+            <h4>Python Django Trainee</h4>
+            <span class="badge bg-primary mb-2">Present</span>
+          </div>
+          <h6 class="text-primary">Markmender</h6>
+          <p class="text-secondary mt-2">
+            Currently learning backend web development using Python and Django. 
+            Building real-world projects including authentication systems and task management applications.
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- Internship -->
+      <div class="col-md-6">
+        <div class="exp-card">
+          <div class="d-flex justify-content-between flex-wrap">
+            <h4>Software Development Intern</h4>
+            <span class="badge bg-primary mb-2">2025</span>
+          </div>
+          <h6 class="text-primary">Emergio Games</h6>
+          <p class="text-secondary mt-2">
+            Gained hands-on experience in software development by working on real-world projects. 
+            Improved coding, debugging, and problem-solving skills while collaborating with a development team.
+          </p>
+        </div>
+      </div>
+
+      <!-- Course -->
+      
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">My Education</h2>
+      </div>
+    </div>
+    <div class="row gy-4">
+      <!-- <div class="col-md-6 col-lg-4">
+        <div class="edu-card">
+          <h4>Master of Computer Applications (MCA)</h4>
+          <p class="text-primary mb-1">New York University</p>
+          <p class="small text-secondary">Focused on advanced topics in software development, database systems, and web technologies.</p>
+          <div class="d-flex justify-content-between mt-2"><span>2018 - 2020</span><span>GPA: 3.9 / 4.0</span></div>
+        </div>
+      </div> -->
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-card">
+          <h4>BVOC Software Development</h4>
+          <p class="text-primary mb-1">City College, New York</p>
+          <p class="small text-secondary">Studied computer science fundamentals, data structures, algorithms, and software engineering.</p>
+          <div class="d-flex justify-content-between mt-2"><span>2020 - 2023</span><span>GPA: 3.6 / 4.0</span></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-card">
+          <h4>Higher Secondary Education</h4>
+          <p class="text-primary mb-1">State Board</p>
+          <p class="small text-secondary">Completed higher secondary education with a focus on Computer Science.</p>
+          <div class="d-flex justify-content-between mt-2"><span>2018 - 2020</span><span>Percentage: 85%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="bg-dark bg-opacity-25">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+    </div>
+    <div class="row gy-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <h3 class="h4 mb-2">To-Do App</h3>
+<p class="text-secondary">Organize your tasks, boost your productivity, and stay on track every day.</p>  
+
+<div class="mt-3">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">SQLite</span>
+          </div>
+          <p class="mt-2 mb-1"><strong>Features:</strong></p>
+
+            <ul class="text-secondary ps-3">
+              <li>Login & Signup</li>
+              <li>CRUD Operations</li>
+              <li>Priority System</li>
+              <li>Mark Tasks as Complete</li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <h3 class="h4 mb-2">Authentication System</h3>
+          <p class="text-secondary">A productivity app to manage tasks and collaborate with teams.</p>
+          
+          <div class="mt-3">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">SQLite</span> 
+          </div>
+          <p class="mt-2 mb-1"><strong>Features:</strong></p>
+
+            <ul class="text-secondary ps-3">
+              <li>Login/logout</li>
+              <li>Password hashing</li>
+              <li>Session handling</li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <h3 class="h4 mb-2">Portfolio</h3>
+          <p class="text-secondary">An e-commerce platform with modern UI and secure payments.</p>
+          
+          <div class="mt-3">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">Bootstrap</span>
+          </div>
+          <p class="mt-3 mb-1 fw-semibold">Features:</p>
+          <ul class="text-secondary small">
+            <li>Responsive design (mobile-friendly)</li>
+            <li>Project showcase with live demo links</li>
+            <li>Skills and technology section</li>
+            <li>Contact form / contact details</li>
+            <li>Resume download option</li>
+            <li>Smooth navigation and UI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="text-secondary mb-4">Let's work together! Feel free to reach out.</p>
+      </div>
+    </div>
+    <div class="row gy-5">
+      <div class="col-lg-5">
+        <div class="contact-card">
+          <div class="mb-4"><i class="fas fa-envelope fs-4 text-primary me-3"></i> sreya.sreekumar@email.com</div>
+          <div class="mb-4"><i class="fas fa-phone-alt fs-4 text-primary me-3"></i> +1 (123) 456-7890</div>
+          <div class="mb-4"><i class="fas fa-map-marker-alt fs-4 text-primary me-3"></i> Kerala, India</div>
+          <div class="mb-4"><i class="fab fa-linkedin fs-4 text-primary me-3"></i> linkedin.com/in/sreyasreekumar</div>
+          <div class="mb-4"><i class="fab fa-github fs-4 text-primary me-3"></i> github.com/sreyasreekumar</div>
+          <div class="mt-4">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <h4 class="mb-3">Send a Message</h4>
+          <form method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control bg-dark text-white border-secondary" placeholder="Your Name" required>
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control bg-dark text-white border-secondary" placeholder="Email Address" required>
+            </div>
+
+            <div class="col-12">
+              <input type="text" name="subject" class="form-control bg-dark text-white border-secondary" placeholder="Subject">
+            </div>
+
+            <div class="col-12">
+              <textarea name="message" rows="4" class="form-control bg-dark text-white border-secondary" placeholder="Your message..." required></textarea>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary-custom w-100">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Sreya Sreekumar | Full Stack Developer. Built with <i class="fas fa-heart text-primary"></i> & Bootstrap</p>
+  </div>
+</footer>
+<div id="successPopup" class="popup-message">
+  ✅ Message sent successfully!
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'PortApp/js/script.js' %}"></script>
+</body>
+</html>
